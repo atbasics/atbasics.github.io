@@ -5,36 +5,36 @@ body {
 }
 /*----------------Tabs----------------*/
 .tabs{
+    height: clamp(8vh, 10vh, 80px);
+    width: 100%;
     display: flex;
     background-color: white;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 .tab{
     width: 16.66%;
-    flex: 1;
     text-align: center;
     color: rgb(0, 0, 0);
     cursor: pointer;
     font-family: 'Old Standard TT', serif;
-    font-size: 18px;
     text-decoration: none;
+    font-size: clamp(1vw, 2vw, 18px);
+    padding: 5px;
+    padding-top: 15px;
 }
 .tab:hover {
     background-color: grey;
     color: white;
     text-decoration: none;
 }
+.icon{
+    height: 10px;
+}
 /*Icon settings*/
 .icon:hover {
     transform: scale(1.1);
 }
-/*add a drop shadow to the tabs*/
-.tabs {
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-}
 /*add padding above the tab text so it is centered*/
-.tab {
-    padding: 15px 0;
-}
 .tab-content {
     text-wrap-mode: auto;
     display: none;
