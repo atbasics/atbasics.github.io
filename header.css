@@ -5,22 +5,28 @@ body {
 }
 /*----------------Tabs----------------*/
 .tabs{
-    height: clamp(8vh, 10vh, 80px);
+    /*height: clamp(56px, 10vh, 80px);*/
+    height:fit-content;
     width: 100%;
     display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
     background-color: white;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* allow tabs to wrap to additional lines on narrow screens */
+    overflow-x: auto; /* enable horizontal scrolling if needed on very small screens */
+    -webkit-overflow-scrolling: touch;
 }
 .tab{
-    width: 16.66%;
+    flex: 0 0 auto; /* don't stretch; let items size to content */
     text-align: center;
     color: rgb(0, 0, 0);
     cursor: pointer;
     font-family: 'Old Standard TT', serif;
     text-decoration: none;
-    font-size: clamp(1vw, 2vw, 18px);
-    padding: 5px;
-    padding-top: 15px;
+    font-size: clamp(14px, 2.5vw, 18px);
+    padding: 8px 12px;
 }
 .tab:hover {
     background-color: grey;
@@ -28,7 +34,15 @@ body {
     text-decoration: none;
 }
 .icon{
-    height: 10px;
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+}
+/* Icon image sizing - responsive */
+.logo{
+    height: 48px;
+    width: auto;
+    display: block;
 }
 /*Icon settings*/
 .icon:hover {
@@ -36,10 +50,20 @@ body {
 }
 /*add padding above the tab text so it is centered*/
 .tab-content {
-    text-wrap-mode: auto;
+    text-wrap-mode: wrap;
     display: none;
     padding: 20px;
     border-top: 1px solid #0f5952;
+}
+/* Reduce sizes on very small screens */
+@media (max-width: 480px) {
+    .logo{ height: 36px; }
+    .tab{ font-size: 13px; padding: 6px 8px; }
+}
+
+@media (max-width: 360px) {
+    .logo{ height: 30px; }
+    .tab{ font-size: 12px; padding: 5px 6px; }
 }
 /*---------------Background---------------*/
 body { 
