@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     loadComponent("header", "header.html");
+    loadComponent("footer", "footer.html");
 });
 
 function loadComponent(id, file) {
