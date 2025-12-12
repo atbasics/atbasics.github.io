@@ -1,0 +1,22 @@
+/*Background color*/
+body {
+    background-color: #a6e3f7;
+}
+/*H1 settings*/
+h1 {
+    text-align: center;
+    font-family: 'Old Standard TT', serif;
+    font-size: 40pt;
+    text-emphasis: bold;
+}
+h2
+{
+    text-align: center;
+    font-family: 'Old Standard TT', serif;
+    font-size: 20pt;
+    text-emphasis: bold;
+}
+p{
+    text-align: center;
+    font-size: 15pt;
+}
