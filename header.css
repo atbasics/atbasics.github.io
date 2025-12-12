@@ -20,7 +20,7 @@ body {
 
 /* responsive logo */
 .logo{
-    height: clamp(32px, 8vw, 64px);
+    height: clamp(40px, 10vw, 80px);
     width: auto;
     display: block;
 }
@@ -43,7 +43,7 @@ body {
     cursor: pointer;
     font-family: 'Old Standard TT', serif;
     text-decoration: none;
-    font-size: clamp(12px, 2.2vw, 16px);
+    font-size: clamp(12px, 2.2vw, 20px);
     padding: 6px 10px;
     border-radius: 4px;
 }
@@ -60,12 +60,10 @@ body {
     .tab{ font-size: 12px; padding: 5px 8px; }
 }
 
-/* tab content (if used) */
 .tab-content {
     text-wrap-mode: auto;
     display: none;
     padding: 20px;
-    border-top: 1px solid #0f5952;
 }
 
 /*---------------Background---------------*/
