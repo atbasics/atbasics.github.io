@@ -1,70 +1,73 @@
-/*header background color*/
+/* header background color */
 body {
     margin: 0;
-    padding: 0; 
+    padding: 0;
 }
-/*----------------Tabs----------------*/
-.tabs{
-    /*height: clamp(56px, 10vh, 80px);*/
-    height:fit-content;
+
+/* header wrapper */
+.header-wrapper{
+    width: 100%;
+}
+
+.logo-container{
     width: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
+    padding: 10px 0 4px 0;
+    background-color: white;
+}
+
+/* responsive logo */
+.logo{
+    height: clamp(32px, 8vw, 64px);
+    width: auto;
+    display: block;
+}
+
+/*----------------Tabs----------------*/
+.tabs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
     gap: 8px;
-    padding: 6px 10px;
+    padding: 8px 12px;
     background-color: white;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    flex-wrap: wrap; /* allow tabs to wrap to additional lines on narrow screens */
-    overflow-x: auto; /* enable horizontal scrolling if needed on very small screens */
-    -webkit-overflow-scrolling: touch;
+    flex-wrap: wrap; /* allow wrapping on small screens */
 }
 .tab{
-    flex: 0 0 auto; /* don't stretch; let items size to content */
+    flex: 0 0 auto;
     text-align: center;
     color: rgb(0, 0, 0);
     cursor: pointer;
     font-family: 'Old Standard TT', serif;
     text-decoration: none;
-    font-size: clamp(14px, 2.5vw, 18px);
-    padding: 8px 12px;
+    font-size: clamp(12px, 2.2vw, 16px);
+    padding: 6px 10px;
+    border-radius: 4px;
 }
 .tab:hover {
     background-color: grey;
     color: white;
     text-decoration: none;
 }
-.icon{
-    display: flex;
-    align-items: center;
-    flex: 0 0 auto;
+
+/* small tweaks for very small screens */
+@media (max-width: 420px) {
+    .tabs{ gap:6px; padding:6px 8px; }
+    .logo{ height: clamp(28px, 10vw, 44px); }
+    .tab{ font-size: 12px; padding: 5px 8px; }
 }
-/* Icon image sizing - responsive */
-.logo{
-    height: 48px;
-    width: auto;
-    display: block;
-}
-/*Icon settings*/
-.icon:hover {
-    transform: scale(1.1);
-}
-/*add padding above the tab text so it is centered*/
+
+/* tab content (if used) */
 .tab-content {
-    text-wrap-mode: wrap;
+    text-wrap-mode: auto;
     display: none;
     padding: 20px;
     border-top: 1px solid #0f5952;
 }
-/* Reduce sizes on very small screens */
-@media (max-width: 480px) {
-    .logo{ height: 36px; }
-    .tab{ font-size: 13px; padding: 6px 8px; }
-}
 
-@media (max-width: 360px) {
-    .logo{ height: 30px; }
-    .tab{ font-size: 12px; padding: 5px 6px; }
-}
 /*---------------Background---------------*/
 body { 
     height: 100%;
@@ -73,6 +76,7 @@ body {
     background-size:cover ;
     background-position: center;
 }
+
 #filter {
     position: fixed;
     width: 100%;
@@ -82,4 +86,4 @@ body {
     z-index: -1;
     transition: background-color 1s ease;
     background-color: rgba(0, 0, 0, 0); /* Default no tint */
-  }
+}
